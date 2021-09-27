@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('realtors', '0001_initial'),
+        ('owners', '0001_initial'),
     ]
 
     operations = [
@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
                 ('photo_6', models.ImageField(blank=True, upload_to='photos/%Y/%m/%d/')),
                 ('is_published', models.BooleanField(default=True)),
                 ('list_date', models.DateTimeField(blank=True, default=datetime.datetime.now)),
-                ('realtor', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='realtors.realtor')),
+                ('owner', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='owners.owner')),
             ],
         ),
     ]

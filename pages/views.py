@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from listings.choices import price_choices, bedroom_choices, state_choices
 
 from listings.models import Listing 
-from realtors.models import Realtor 
+from owners.models import Owner 
 
 def index(request):
     listings = Listing.objects.order_by('-list_date').filter(is_published=True)[:3]
@@ -21,14 +21,14 @@ def index(request):
 
 def about(request):
     #get all realtor
-    realtors = Realtor.objects.order_by('-hire_date')
+    owners = Owner.objects.order_by('-hire_date')
 
     #get mvp 
-    mvp_realtors = Realtor.objects.all().filter(is_mvp=True)
+    mvp_owners = Owner.objects.all().filter(is_mvp=True)
 
     context = {
-        'realtors': realtors,
-        'mvp_realtors': mvp_realtors
+        'owners': owners,
+        'mvp_owners': mvp_owners
     }
     return render(request,'pages/about.html', context)
 

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from django.contrib.messages import constants as messages
 from pathlib import Path
 import os
 
@@ -35,7 +36,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'listings.apps.ListingsConfig',
-    'realtors.apps.RealtorsConfig',
+    'owners.apps.OwnersConfig',
     'contacts.apps.ContactsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -85,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'btredb',
         'USER': 'postgres',
-        'PASSWORD': '123',
+        'PASSWORD': 'iloveice44',
         'HOST': 'localhost'
     }
 }
@@ -135,11 +136,10 @@ STATICFILES_DIRS = [
 ]
 
 # Media Folder settings
-MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # Messages
-from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
@@ -149,7 +149,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'devyansh.agarwal2022@gmail.com'
 EMAIL_HOST_PASSWORD = 'iloveice44'
-EMAIL_USE_TLS=True
+EMAIL_USE_TLS = True
 
 
 # Default primary key field type

@@ -32,14 +32,14 @@
         </div>
         <div class="col-md-4">
 
-          {% if mvp_realtors %}
-            {% for realtor in mvp_realtors%}
+          {% if mvp_owners %}
+            {% for owner in mvp_owners%}
               <div class="card">
-                <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Seller of the month">
+                <img class="card-img-top" src="{{ owner.photo.url }}" alt="Seller of the month">
                 <div class="card-body">
                   <h5 class="card-title">Seller Of The Month</h5>
-                  <h6 class="text-secondary">{{ realtor.name }}</h6>
-                  <p class="card-text">{{ realtor.description }}
+                  <h6 class="text-secondary">{{ owner.name }}</h6>
+                  <p class="card-text">{{ owner.description }}
                   </p>
                 </div>
               </div>
@@ -65,23 +65,23 @@
       <h2 class="text-center">Our Team</h2>
       <div class="row text-center">
 
-        {% if realtors %}
-          {% for realtor in realtors %}
+        {% if owners %}
+          {% for owner in owners %}
             <div class="col-md-4">
-              <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-3">
-              <h4>{{ realtor.name }}</h4>
+              <img src="{{ owner.photo.url }}" alt="" class="rounded-circle mb-3">
+              <h4>{{ owner.name }}</h4>
               <p class="text-success">
-                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+                <i class="fas fa-award text-success mb-3"></i> Owner</p>
               <hr>
               <p>
-                <i class="fas fa-phone"></i> {{ realtor.phone }}</p>
+                <i class="fas fa-phone"></i> {{ owner.phone }}</p>
               <p>
-                <i class="fas fa-envelope-open"></i> {{ realtor.email }}</p>
+                <i class="fas fa-envelope-open"></i> {{ owner.email }}</p>
             </div>
           {% endfor %}
         {% else %}
           <div class="col-md-12">
-            <p>No Realtors Available</p>
+            <p>No Owners Available</p>
           </div>
         {% endif %}
 
