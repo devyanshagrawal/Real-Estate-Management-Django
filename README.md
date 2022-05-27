@@ -57,5 +57,7 @@ A property management system has been developed which takes care of listings, ag
 
 ![Screenshot 2022-05-27 at 12 49 38 PM](https://user-images.githubusercontent.com/91361896/170651135-082128b8-85ba-4132-b215-e59a6f8d001a.png)
 
+<br><br>
+<b>Youtube: https://www.youtube.com/watch?v=Sz1XDHlDQ44</b>
 <b>Tags: Python, Django, PostGres</b>
 <br><br>
